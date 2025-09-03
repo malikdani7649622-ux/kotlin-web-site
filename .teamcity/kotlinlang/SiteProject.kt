@@ -5,6 +5,7 @@ import kotlinlang.builds.*
 import kotlinlang.builds.landing.LandingPages
 import kotlinlang.vcsRoots.GrammarGenerator
 import kotlinlang.vcsRoots.KotlinSpec
+import kotlinlang.vcsRoots.LandingPagesVCS
 import kotlinlang.vcsRoots.WebHelp
 import templates.DockerImageBuilder
 
@@ -34,4 +35,5 @@ object SiteProject : Project({
     vcsRoot(GrammarGenerator)
     vcsRoot(KotlinSpec)
     vcsRoot(WebHelp)
+    vcsRoot(LandingPagesVCS)
 })

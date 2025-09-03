@@ -4,7 +4,7 @@ import jetbrains.buildServer.configs.kotlin.BuildType
 import jetbrains.buildServer.configs.kotlin.ParameterDisplay
 import jetbrains.buildServer.configs.kotlin.Project
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
-import vcsRoots.KotlinLangOrg
+import kotlinlang.vcsRoots.LandingPagesVCS
 
 object LandingPages : Project({
     name = "Landing Pages"
@@ -27,13 +27,13 @@ object BuildLandingPages: BuildType ({
     }
 
     vcs {
-        root(KotlinLangOrg)
+        root(LandingPagesVCS)
     }
 
     steps {
         script {
             name = "Build landing"
-            workingDir = "landings/%LANDING_NAME%/"
+            workingDir = "landings/%LANDING_NAME/"
             scriptContent = """
                 #!/bin/bash
                 set -e
