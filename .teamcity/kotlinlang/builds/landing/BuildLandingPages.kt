@@ -33,7 +33,7 @@ object BuildLandingPages: BuildType ({
     steps {
         script {
             name = "Build landing"
-            workingDir = "landings/%LANDING_NAME/"
+            workingDir = "landings/%LANDING_NAME%/"
             scriptContent = """
                 #!/bin/bash
                 set -e
