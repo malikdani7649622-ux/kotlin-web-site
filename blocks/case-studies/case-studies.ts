@@ -1,14 +1,18 @@
 export type CaseStudyType = 'multiplatform' | 'server-side';
 
+export type  CaseTypeSwitch = 'all' | CaseStudyType;
+
 type CaseStudyDestination = 'internal' | 'external';
 
-export type Platform =
-    | 'android'
-    | 'ios'
-    | 'desktop'
-    | 'frontend'
-    | 'backend'
-    | 'compose-multiplatform';
+export const Platforms = [
+    'android',
+    'ios',
+    'desktop',
+    'frontend',
+    'backend',
+] as const;
+
+export type CasePlatform = typeof Platforms[number] | 'compose-multiplatform';
 
 type Signature = {
     line1: string;
@@ -34,7 +38,7 @@ interface CaseStudyItemBase {
     destination: CaseStudyDestination;
     logo?: string[];
     signature?: Signature;
-    platforms?: Platform[];
+    platforms?: CasePlatform[];
     media?: Media;
     featuredOnMainPage?: boolean;
     slug?: string;

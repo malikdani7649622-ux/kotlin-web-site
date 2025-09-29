@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './case-studies-card.module.css';
 import { AndroidIcon, AppleIcon, ServerIcon, ComputerIcon, GlobusIcon } from '@rescui/icons';
-import { CaseStudyItem, CaseStudyType, isExternalCaseStudy, Platform } from '../case-studies';
+import { CaseStudyItem, CaseStudyType, isExternalCaseStudy, CasePlatform } from '../case-studies';
 
 
 /**
@@ -50,7 +50,7 @@ const badgeClass: Record<CaseStudyType, string> = {
 
 // Platform icon path builder. If you keep icons in (for example) /images/platforms/*.svg,
 // they’ll be resolved automatically by key. If an icon is missing, we still render the label.
-const getPlatformIcon = (p: Platform) => {
+const getPlatformIcon = (p: CasePlatform) => {
     switch (p) {
         case 'android':
             return <AndroidIcon/>;
@@ -218,7 +218,7 @@ function hideBrokenIcon(img: HTMLImageElement) {
 /**
  * Humanize platform name for label.
  */
-function humanizePlatform(p: Platform): string {
+function humanizePlatform(p: CasePlatform): string {
     switch (p) {
         case 'compose-multiplatform':
             return 'Compose Multiplatform';
