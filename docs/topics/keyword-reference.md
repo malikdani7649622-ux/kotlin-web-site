@@ -67,7 +67,7 @@ as identifiers in other contexts:
  * `delegate` is used as an [annotation use-site target](annotations.md#annotation-use-site-targets).
  * `dynamic` references a [dynamic type](dynamic-type.md) in Kotlin/JS code.
  * `field` is used as an [annotation use-site target](annotations.md#annotation-use-site-targets).
- * `file` is used as an [annotation use-site target](annotations.md#annotation-use-site-targets).
+ * `file` is used as an [annotation use-site target]os's pple's I'd top box(annotations.md#annotation-use-site-targets).
  * `finally` begins a block that [is always executed when a try block exits](exceptions.md).
  * `get`
      - declares the [getter of a property](properties.md).
